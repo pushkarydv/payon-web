@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { MoonIcon, SunIcon } from "@heroicons/react/outline";
+import { Link } from "react-router-dom";
 export default function Header() {
   const [dark, setDark] = useState(false);
   useEffect(() => {
@@ -23,9 +24,9 @@ export default function Header() {
   }
   return (
     <div className="flex flex-row text-4xl font-bold items-center justify-between px-4">
-      <button className="flex flex-row items-center">
+      <Link to={"/"} className="flex flex-row items-center">
         <img src="/logo.png" className="h-12 mr-2" alt="" /> Payon
-      </button>
+      </Link>
 
       <button onClick={changeTheme} className="transition active:scale-90">
         {/* show svg after checking if page is dark or light  */}
