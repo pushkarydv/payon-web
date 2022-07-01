@@ -10,7 +10,6 @@ export default function Header() {
       document.documentElement.classList.add("dark");
     }
   }, []);
-
   function changeTheme() {
     if (dark) {
       document.documentElement.classList.remove("dark");
