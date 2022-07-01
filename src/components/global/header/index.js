@@ -4,7 +4,7 @@ export default function Header() {
   const [dark, setDark] = useState(false);
   useEffect(() => {
     // getting if there any mode set by user
-    if (localStorage.getItem("payon_dark") == "dark") {
+    if (localStorage.getItem("payon_dark") === "dark") {
       setDark(true);
       document.documentElement.classList.add("dark");
     }
@@ -23,9 +23,9 @@ export default function Header() {
   }
   return (
     <div className="flex flex-row text-4xl font-bold items-center justify-between px-4">
-      <a href="#" className="flex flex-row items-center">
+      <button className="flex flex-row items-center">
         <img src="/logo.png" className="h-12 mr-2" alt="" /> Payon
-      </a>
+      </button>
 
       <button onClick={changeTheme} className="transition active:scale-90">
         {/* show svg after checking if page is dark or light  */}

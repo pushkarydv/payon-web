@@ -10,7 +10,7 @@ export default function Dashboard() {
     } else {
       navigate("/", { replace: true });
     }
-  });
+  }, [navigate]);
   // function to clear user from local storage and hence it log outs in our demo app
   function logout() {
     localStorage.removeItem("payon-web-user");
