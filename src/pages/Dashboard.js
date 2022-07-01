@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Header from "../components/global/Header";
+import Header from "../components/global/Header/Header";
 export default function Dashboard() {
   const navigate = useNavigate();
   const [contentVisible, setContentVisible] = useState(false);
