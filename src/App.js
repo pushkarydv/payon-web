@@ -1,13 +1,11 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import "./App.css";
-import Header from "./components/global/header";
 import Dashboard from "./pages/Dashboard";
 import Home from "./pages/Home";
 
 export default function App() {
   return (
     <main className="min-h-screen w-full overflow-x-hidden bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-50">
-      <Header />
       {/* added routes  */}
       <BrowserRouter>
         <Routes>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Header from "../components/global/Header";
 export default function Dashboard() {
   const navigate = useNavigate();
   const [contentVisible, setContentVisible] = useState(false);
@@ -18,16 +19,13 @@ export default function Dashboard() {
   }
   return (
     <>
+      <Header />
       {contentVisible ? (
-        <div className="w-full flex flex-row">
-          <div className="w-[25%] p-4 text-lg">
-            <button
-              onClick={logout}
-              className="mx-2 my-2 p-2 bg-sky-400 text-slate-50 rounded-xl ring-4 ring-sky-200"
-            >
-              Logout
-            </button>
+        <div className="w-full flex flex-col  lg:flex-row flex-wrap">
+          <div className="w-full lg:w-[20%] xl:w-[15%] p-4 ">
+            Dashboard Col 1
           </div>
+          <div className=" w-[85%] p-4">Dashboard Col 2</div>
         </div>
       ) : (
         <></>
