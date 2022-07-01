@@ -25,7 +25,9 @@ export default function Dashboard() {
           <div className="w-full lg:w-[20%] xl:w-[15%] p-4 ">
             Dashboard Col 1
           </div>
-          <div className=" w-[85%] p-4">Dashboard Col 2</div>
+          <div className="w-full lg:w-[80%] xl:w-[85%] p-4">
+            Dashboard Col 2
+          </div>
         </div>
       ) : (
         <></>
