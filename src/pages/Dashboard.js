@@ -26,8 +26,8 @@ export default function Dashboard() {
             Dashboard Col 1 containing routes
           </div>
           <div className="w-full lg:w-[80%] xl:w-[85%] p-4">
-            Dashboard Col 2 outlet for routes for more ref :{"  "}
-            https://reactrouter.com/docs/en/v6/components/outlet
+            Dashboard Col 2 outlet for routes for more ref : react router v6
+            outlet
             <br />
             <button
               className="my-2 mx-auto py-1 bg-slate-100 px-2 rounded-lg ring-2 ring-slate-600 shadow-lg shadow-slate-300 dark:bg-slate-800 dark:text-slate-100 dark:shadow-slate-800 dark:ring-slate-200"
