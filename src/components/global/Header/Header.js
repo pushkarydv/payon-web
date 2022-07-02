@@ -38,7 +38,7 @@ export default function Header() {
   }
 
   return (
-    <div className="flex flex-row text-4xl font-bold items-center justify-between px-4">
+    <div className="flex flex-row text-4xl font-bold items-center justify-between p-2 md:p-4 lg:p-6">
       <Link to={"/"} className="no-underline flex flex-row items-center">
         <img src="/logo.png" className="h-12 mr-2" alt="" /> Payon{" "}
       </Link>{" "}
