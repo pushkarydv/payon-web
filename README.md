@@ -20,7 +20,11 @@ Libraries used:
 - [TailwindCSS](https://tailwindcss.com/)
 
 ## Screenshots
-<!-- Will be added here -->
+![3152289e-5428-45d2-b7c1-570e944ae980](https://user-images.githubusercontent.com/96358784/177014611-560a89dd-1c4e-4421-aa41-658314d82afb.png)
+![09f4c15e-b3af-4c2f-a6ff-507bf5633567](https://user-images.githubusercontent.com/96358784/177014615-20edd0b8-2cb5-42c6-b650-e6a20e568bd9.png)
+![6c773e18-8832-4467-9bfc-db848acacfa7](https://user-images.githubusercontent.com/96358784/177014620-5c401321-3883-4d5c-8e7a-f3b466be8a71.png)
+![3311838d-a2b3-44fe-a5a6-d00e9f1e8890](https://user-images.githubusercontent.com/96358784/177014622-fe2277ea-aa3c-4861-9e76-b3b0a0a32a96.png)
+
 
 
 ## Contribute 
