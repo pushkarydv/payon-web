@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
 import Header from "../components/global/Header/Header";
 export default function Dashboard() {
   const navigate = useNavigate();
+  const currentRoute = useLocation();
   const [contentVisible, setContentVisible] = useState(false);
   // implemented first checkpoint
   useEffect(() => {
@@ -11,30 +12,34 @@ export default function Dashboard() {
     } else {
       navigate("/", { replace: true });
     }
-  }, [navigate]);
-  // function to clear user from local storage and hence it log outs in our demo app
-  function logout() {
-    localStorage.removeItem("payon-web-user");
-    navigate("/");
-  }
+    // check if current route is dashboard then it will open basics outlet by default
+    if (currentRoute.pathname === "/dashboard") {
+      navigate("/dashboard/basics", { replace: true });
+    }
+  }, [navigate, currentRoute.pathname]);
+
   return (
     <>
       <Header />
       {contentVisible ? (
         <div className="w-full flex flex-col  lg:flex-row flex-wrap">
-          <div className="w-full lg:w-[20%] xl:w-[15%] p-4 ">
-            Dashboard Col 1 containing routes
+          <div className="w-full lg:w-[20%] xl:w-[15%] p-4 flex flex-row overflow-x-auto justify-start lg:flex-col text-lg  ">
+            <Link className="mr-2 p-1" to={"/dashboard/basics"}>
+              Basics
+            </Link>
+            <Link className="mr-2 p-1" to={"/dashboard/bills"}>
+              Bills
+            </Link>
+            <Link className="mr-2 p-1" to={"/dashboard/manage"}>
+              Manage
+            </Link>
           </div>
           <div className="w-full lg:w-[80%] xl:w-[85%] p-4">
-            Dashboard Col 2 outlet for routes for more ref : react router v6
-            outlet
+            {/* outlet is something by which the data flows 
+            here when the route will be called /dashboard/... then it will come into outlet rather then going in a new page
+            */}
+            <Outlet />
             <br />
-            <button
-              className="my-2 mx-auto py-1 bg-slate-100 px-2 rounded-lg ring-2 ring-slate-600 shadow-lg shadow-slate-300 dark:bg-slate-800 dark:text-slate-100 dark:shadow-slate-800 dark:ring-slate-200"
-              onClick={logout}
-            >
-              logout
-            </button>
           </div>
         </div>
       ) : (
