@@ -1,6 +1,6 @@
 import React from "react";
 import PieChart from "../../components/billsComponent/PieChart";
-import { Data } from "../../components/config/BasicData";
+import { Data } from "../../components/config/BillsData";
 
 function sum(arr) {
   return arr.reduce((x, y) => x + y, 0);
