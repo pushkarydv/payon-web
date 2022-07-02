@@ -35,20 +35,23 @@ export default function Basics() {
       </div>
       <div className="mt-12 mx-2">
         <div className="text-2xl">Transactions</div>
-        {Data.bank.transactions.map(([name, type, amount, message, date]) => (
-          <TransactionBox
-            head={type === "send" ? `-${amount}` : `+${amount}`}
-            type={type}
-            key={date + name + message}
-          >
-            <div>
+        {Data.bank.transactions.map(
+          ([name, type, amount, message, date, id]) => (
+            <TransactionBox
+              head={type === "send" ? `-${amount}` : `+${amount}`}
+              type={type}
+              key={date + name + message}
+            >
               <div>
-                {type === "send" ? "To  " : "From "} {name}
+                <div>
+                  {type === "send" ? "To  " : "From "} {name}
+                </div>
+                <div>{message}</div> <div className="text-sm">{date}</div>
+                <div>Transaction id: {id}</div>
               </div>
-              <div>{message}</div> <div className="text-sm">{date}</div>
-            </div>
-          </TransactionBox>
-        ))}
+            </TransactionBox>
+          )
+        )}
       </div>
     </div>
   );
