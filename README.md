@@ -23,6 +23,7 @@ Libraries used:
 - [React Router v6](https://reactrouter.com/)
 - [TailwindCSS](https://tailwindcss.com/)
 - [chart.js](https://www.chartjs.org/)
+- [react-chartjs-2](https://www.npmjs.com/package/react-chartjs-2)
 
 ## Screenshots
 
