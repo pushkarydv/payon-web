@@ -2,7 +2,7 @@ import React from "react";
 
 export default function OpenSource() {
   return (
-    <div className="flex flex-col md:flex-row my-8 text-primary-600 dark:text-secondary-500 mt-12 lg:mt-20 xl:mt-28 p-4">
+    <div className="flex flex-col md:flex-row text-primary-600 dark:text-secondary-500 my-12 lg:mt-20 xl:mt-28 p-4">
       <div className="w-full md:w-6/12 flex flex-col justify-center items-center ">
         <svg
           xmlns="http://www.w3.org/2000/svg"

@@ -10,7 +10,7 @@ import FeatureContainer from "./FeatureContainer";
 export default function Features() {
   return (
     <>
-      <div className="mt-12 mb-4 text-2xl px-2 md:text-3xl lg:text-4xl font-medium text-center">
+      <div className="my-12 text-2xl px-2 md:text-3xl lg:text-4xl font-medium text-center">
         <span className="underline  underline-offset-8"> Features</span>
       </div>{" "}
       <div className="flex flex-row flex-wrap  justify-center my-12 ">
