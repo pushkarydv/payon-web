@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import "./App.css";
+import "./scrollbar.css";
 import Dashboard from "./pages/Dashboard";
 import Home from "./pages/Home";
 import Basics from "./pages/DashboardPages/Basics";
