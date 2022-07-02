@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { MoonIcon, SunIcon, LogoutIcon } from "@heroicons/react/outline";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 export default function Header() {
   const navigate = useNavigate();
+  const currentRoute = useLocation(); // fetching properties of current route
   const [dark, setDark] = useState(false);
   const [logout, setLogout] = useState(false); // this state is used to show or hide logout button
   useEffect(() => {
@@ -13,9 +14,12 @@ export default function Header() {
     }
 
     if (localStorage.getItem("payon-web-user")) {
-      setLogout(true);
+      // check if user is on homepage - if it is on homepage then no logout button will be shown
+      if (!(currentRoute.pathname === "/")) {
+        setLogout(true);
+      }
     }
-  }, []);
+  }, [currentRoute.pathname]);
   function changeTheme() {
     if (dark) {
       document.documentElement.classList.remove("dark");
@@ -34,7 +38,7 @@ export default function Header() {
   }
 
   return (
-    <div className="flex flex-row text-4xl font-bold items-center justify-between px-4">
+    <div className="flex flex-row text-4xl font-bold items-center justify-between p-2 md:p-4 lg:p-6">
       <Link to={"/"} className="no-underline flex flex-row items-center">
         <img src="/logo.png" className="h-12 mr-2" alt="" /> Payon{" "}
       </Link>{" "}
@@ -42,7 +46,7 @@ export default function Header() {
         {/* show logout on the basis of state  */}
         {logout && (
           <button
-            className="my-2 mx-auto bg-slate-100 p-2 rounded-full ring-2 ring-slate-600   dark:bg-slate-800 dark:text-slate-100  dark:ring-slate-200 mr-4"
+            className="my-2 mx-auto bg-slate-100 p-2 rounded-full ring-2 ring-slate-600   dark:bg-slate-800 dark:text-slate-100  dark:ring-slate-200 mr-4 active:scale-90"
             onClick={logoutUser}
           >
             <LogoutIcon className="w-4" />
