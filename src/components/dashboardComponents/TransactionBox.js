@@ -7,7 +7,7 @@ export default function TransactionBox({ head, type, children }) {
     open ? setOpen(false) : setOpen(true);
   }
   return (
-    <div className="transition-all my-1 py-1 border-b-2 border-b-slate-100">
+    <div className="transition-all my-1 py-1 border-b-2 border-b-slate-100 dark:border-b-slate-700">
       <div
         className="flex flex-row justify-between text-lg cursor-pointer"
         onClick={toggle}
