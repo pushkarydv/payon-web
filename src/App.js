@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Basics from "./pages/DashboardPages/Basics";
 import Bills from "./pages/DashboardPages/Bills";
 import Manage from "./pages/DashboardPages/Manage";
+import Profile from "./pages/DashboardPages/Profile";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
             <Route path="basics" element={<Basics />} />
             <Route path="bills" element={<Bills />} />
             <Route path="manage" element={<Manage />} />
+            <Route path="profile" element={<Profile />} />
           </Route>
           {/* if route does not exist the user will be redirected to "/" with the path = "*" below */}
           <Route path="*" element={<Navigate to="/" replace />} />

@@ -23,16 +23,24 @@ export default function Dashboard() {
       <Header />
       {contentVisible ? (
         <div className="w-full flex flex-col  lg:flex-row flex-wrap">
-          <div className="w-full lg:w-[20%] xl:w-[15%] p-4 flex flex-row overflow-x-auto justify-start lg:flex-col text-lg  ">
-            <Link className="mr-2 p-1" to={"/dashboard/basics"}>
-              Basics
-            </Link>
-            <Link className="mr-2 p-1" to={"/dashboard/bills"}>
-              Bills
-            </Link>
-            <Link className="mr-2 p-1" to={"/dashboard/manage"}>
-              Manage
-            </Link>
+          <div className="w-full lg:w-[20%] xl:w-[15%] p-4 flex flex-row overflow-x-auto justify-evenly lg:justify-start lg:flex-col text-lg  ">
+            {[
+              ["Basics", "/dashboard/basics"],
+              ["Bills", "/dashboard/bills"],
+              ["Manage", "/dashboard/manage"],
+              ["Profile", "/dashboard/profile"],
+            ].map(([name, route]) => (
+              <Link
+                className={
+                  "transition mr-2 my-1 p-1 rounded-lg active:scale-95 " +
+                  (route === currentRoute.pathname &&
+                    "bg-emerald-100 ring-2 ring-emerald-300 dark:bg-emerald-100/20")
+                }
+                to={route}
+              >
+                {name}
+              </Link>
+            ))}
           </div>
           <div className="w-full lg:w-[80%] xl:w-[85%] p-4">
             {/* outlet is something by which the data flows 
