@@ -31,6 +31,7 @@ export default function Dashboard() {
               ["Profile", "/dashboard/profile"],
             ].map(([name, route]) => (
               <Link
+                key={name}
                 className={
                   "transition mr-2 my-1 p-1 rounded-lg active:scale-95 " +
                   (route === currentRoute.pathname &&
