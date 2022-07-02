@@ -2,41 +2,17 @@ export const Data = {
   bank: {
     balance: "$23500",
     transactions: [
-      {
-        person: "John wick",
-        type: "reciene",
-        amount: "$2000",
-        message: "No i can't do that",
-        date: "2022-07-02",
-      },
-      {
-        person: "John wick",
-        type: "send",
-        amount: "$2000",
-        message: "Write some code of our app",
-        date: "2022-07-01",
-      },
-      {
-        person: "Choco ice cream store",
-        type: "send",
-        amount: "$10",
-        message: "",
-        date: "2022-07-01",
-      },
-      {
-        person: "Vercel",
-        type: "send",
-        amount: "$100",
-        message: "extended plan",
-        date: "2022-06-27",
-      },
-      {
-        person: "Jame",
-        type: "recieve",
-        amount: "$200",
-        message: "web payment",
-        date: "2022-06-21",
-      },
+      ["John wick", "recieve", "$2000", "No i can't do that", "2022-07-02"],
+      [
+        "John wick",
+        "send",
+        "$2000",
+        "Write some code of our app",
+        "2022-07-01",
+      ],
+      ["Choco ice cream store", "send", "$10", "", "2022-07-01"],
+      ["Vercel", "send", "$100", "extended plan", "2022-06-27"],
+      ["Jame", "recieve", "$200", "web payment", "2022-06-21"],
     ],
   },
 };
