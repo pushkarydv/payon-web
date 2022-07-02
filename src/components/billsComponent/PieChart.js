@@ -1,5 +1,5 @@
 import React from "react";
-import { Data } from "../../components/config/BasicData";
+import { Data } from "../../components/config/BillsData";
 import { Pie } from "react-chartjs-2";
 import { Chart, ArcElement } from "chart.js";
 Chart.register(ArcElement);
