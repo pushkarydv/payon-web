@@ -39,7 +39,6 @@ export default function Dashboard() {
             here when the route will be called /dashboard/... then it will come into outlet rather then going in a new page
             */}
             <Outlet />
-            <br />
           </div>
         </div>
       ) : (
