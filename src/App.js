@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 
 export default function App() {
   return (
-    <main className="min-h-screen w-full overflow-x-hidden bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-50">
+    <main className="min-h-screen w-full overflow-x-hidden bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-50 custom-font">
       {/* added routes  */}
       <BrowserRouter>
         <Routes>
