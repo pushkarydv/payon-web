@@ -1,5 +1,4 @@
 export const Data = {
-  name: "Spiderman",
   bank: {
     balance: "$23500",
     transactions: [
