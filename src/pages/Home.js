@@ -5,7 +5,7 @@ import Header from "../components/global/Header/Header";
 export default function Home() {
   const navigate = useNavigate();
   function demoLogin() {
-    localStorage.setItem("payon-web-user", "Demo User");
+    localStorage.setItem("payon-web-user", "Spiderman");
     navigate("/dashboard");
   }
   return (
