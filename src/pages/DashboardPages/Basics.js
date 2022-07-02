@@ -39,6 +39,7 @@ export default function Basics() {
           <TransactionBox
             head={type === "send" ? `-${amount}` : `+${amount}`}
             type={type}
+            key={date + name + message}
           >
             <div>
               <div>
