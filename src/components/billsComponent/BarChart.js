@@ -1,5 +1,5 @@
 import React from "react";
-import { Data } from "../../components/config/BillsData";
+import { Data } from "../../components/localData/BillsData";
 import { Bar } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -91,7 +91,7 @@ export const data = {
 const BarChat = () => {
   return (
     <>
-      <Bar options={options} data={data} />;
+      <Bar options={options} data={data} />
     </>
   );
 };

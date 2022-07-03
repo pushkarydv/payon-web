@@ -1,6 +1,6 @@
 import React from "react";
 import BarChat from "../../components/billsComponent/BarChart";
-import { Data } from "../../components/config/BillsData";
+import { Data } from "../../components/localData/BillsData";
 //functions
 function sum(arr) {
   return arr.reduce((x, y) => x + y, 0);

@@ -1,6 +1,6 @@
 import { CashIcon, CurrencyDollarIcon } from "@heroicons/react/outline";
 import React from "react";
-import { Data } from "../../components/config/BasicData";
+import { Data } from "../../components/localData/BasicData";
 import TransactionBox from "../../components/dashboardComponents/TransactionBox";
 
 export default function Basics() {
