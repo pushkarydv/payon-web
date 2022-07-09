@@ -7,11 +7,13 @@ import Basics from "./pages/DashboardPages/Basics";
 import Bills from "./pages/DashboardPages/Bills";
 import Manage from "./pages/DashboardPages/Manage";
 import Profile from "./pages/DashboardPages/Profile";
+import Broadcast from "./components/Broadcast";
 
 export default function App() {
   return (
     <main className="min-h-screen w-full overflow-x-hidden bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-50 custom-font">
       {/* added routes  */}
+      <Broadcast />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
