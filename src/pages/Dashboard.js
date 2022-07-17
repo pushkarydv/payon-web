@@ -45,7 +45,7 @@ export default function Dashboard() {
           </div>
           <div className="w-full lg:w-[80%] xl:w-[85%] p-4">
             {/* outlet is something by which the data flows 
-            here when the route will be called /dashboard/... then it will come into outlet rather then going in a new page
+            here when the route will be called /dashboard/basics... then basics will come through outlet rather then going in a new page
             */}
             <Outlet />
           </div>
